@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\home;
+use App\Http\Controllers\homeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +15,9 @@ use App\Http\Controllers\home;
 */
 
 // Route::get('/', )
-Route::get('/', [home::class, 'categoriess']);
-Route::get('/product/{id}', [home::class, 'product']);
+Route::get('/', [homeController::class, 'categoriess']);
+Route::get('/product/{id}', [homeController::class, 'product']);
+
+//another way 
+// route::get('/product/{id}','\app\Http\Controllers\homeController@product');
 
